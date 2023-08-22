@@ -1,6 +1,6 @@
 # source
 This project code comes from https://github.com/openai/improved-diffusion.
-Intended to use the [jittor](https://cg.cs.tsinghua.edu.cn/jittor/assets/docs/index.html) framework to implement the improved diffusion operation of the Pytorch version.
+Intended to use the [jtorch](https://github.com/JITTorch/jtorch),[jittor](https://cg.cs.tsinghua.edu.cn/jittor/assets/docs/index.html) framework to implement the improved diffusion operation of the Pytorch version.
 
 # improved-diffusion
 
