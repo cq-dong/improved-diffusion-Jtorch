@@ -1,6 +1,6 @@
 # source
-This project code comes from https://github.com/openai/improved-diffusion
-
+This project code comes from https://github.com/openai/improved-diffusion.
+Intended to use the jittor framework to implement the improved diffusion operation of the Pytorch version.
 
 # improved-diffusion
 
