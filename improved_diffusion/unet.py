@@ -190,6 +190,7 @@ class ResBlock(TimestepBlock):
             out_norm, out_rest = self.out_layers[0], self.out_layers[1:]
             scale, shift = th.chunk(emb_out, 2, dim=1)
             h = out_norm(h) * (1 + scale) + shift
+            out_rest=nn.Sequential(*out_rest)
             h = out_rest(h)
         else:
             h = h + emb_out
