@@ -109,29 +109,6 @@ DIFFUSION_FLAGS="--diffusion_steps 4000 --noise_schedule cosine --rescale_learne
 TRAIN_FLAGS="--lr 3e-4 --batch_size 2048"
 ```
 
-Upsampling 256x256 model (280M parameters, trained for 500K iterations) [[checkpoint](https://openaipublic.blob.core.windows.net/diffusion/march-2021/upsample_cond_500K.pt)]:
-
-```bash
-MODEL_FLAGS="--num_channels 192 --num_res_blocks 2 --learn_sigma True --class_cond True"
-DIFFUSION_FLAGS="--diffusion_steps 4000 --noise_schedule linear --rescale_learned_sigmas False --rescale_timesteps False"
-TRAIN_FLAGS="--lr 3e-4 --batch_size 256"
-```
-
-LSUN bedroom model (lr=1e-4) [[checkpoint](https://openaipublic.blob.core.windows.net/diffusion/march-2021/lsun_uncond_100M_1200K_bs128.pt)]:
-
-```bash
-MODEL_FLAGS="--image_size 256 --num_channels 128 --num_res_blocks 2 --num_heads 1 --learn_sigma True --use_scale_shift_norm False --attention_resolutions 16"
-DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule linear --rescale_learned_sigmas False --rescale_timesteps False"
-TRAIN_FLAGS="--lr 1e-4 --batch_size 128"
-```
-
-LSUN bedroom model (lr=2e-5) [[checkpoint](https://openaipublic.blob.core.windows.net/diffusion/march-2021/lsun_uncond_100M_2400K_bs64.pt)]:
-
-```bash
-MODEL_FLAGS="--image_size 256 --num_channels 128 --num_res_blocks 2 --num_heads 1 --learn_sigma True --use_scale_shift_norm False --attention_resolutions 16"
-DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule linear --rescale_learned_sigmas False --rescale_timesteps False --use_scale_shift_norm False"
-TRAIN_FLAGS="--lr 2e-5 --batch_size 128"
-```
 
 Unconditional ImageNet-64 with the `L_vlb` objective and cosine noise schedule [[checkpoint](https://openaipublic.blob.core.windows.net/diffusion/march-2021/imagenet64_uncond_vlb_100M_1500K.pt)]:
 
